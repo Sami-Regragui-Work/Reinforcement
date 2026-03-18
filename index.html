@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script
+            src="semaine-01-javascript-tableaux-objets/Jour 02/exercice-01.js"
+            defer
+        ></script>
+    </head>
+    <body>
+        <div
+            id="log"
+            style="font-family: 'Consolas', 'Courier New', monospace; padding: 10px; border-radius: 8px; background: #1e1e1e; color: #dcdcdc;"
+        ></div>
+
+        <script>
+            const logElement = document.getElementById("log");
+            console.log = (function (original) {
+                return function (...args) {
+                    original.apply(console, args);
+
+                    const entry = document.createElement("pre");
+                    entry.style.margin = "8px 0";
+                    entry.style.padding = "10px";
+                    entry.style.backgroundColor = "#2d2d2d";
+                    entry.style.borderRadius = "4px";
+                    entry.style.overflow = "auto";
+
+                    const code = document.createElement("code");
+                    code.className = "javascript";
+                    code.textContent = args.map((arg) => (typeof arg === "object" ? JSON.stringify(arg, null, 2) : String(arg))).join(" ");
+
+                    entry.appendChild(code);
+                    logElement.appendChild(entry);
+
+                    hljs.highlightElement(code);
+                };
+            })(console.log);
+        </script>
+    </body>
+</html>
