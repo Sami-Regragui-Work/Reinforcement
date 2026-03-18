@@ -124,7 +124,7 @@ function statistiquesParDepartement(employes) {
     });
     for (let key in holder)
         holder[key].salaireMoyen /= holder[key].effectif;
-    return Object.values(holder);
+    return trierEmployes(Object.values(holder), 'effectif', 'desc');
 }
 
 // Tests
