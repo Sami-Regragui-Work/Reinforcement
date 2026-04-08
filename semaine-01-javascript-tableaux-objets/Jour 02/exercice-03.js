@@ -177,6 +177,8 @@ function serieInvaincue(matchs, equipe) {
     return streak;
 }
 
+console.log("***************************** J2-EX3 *****************************");
+
 const classement = calculerClassement(matchs);
 console.log("--- Classement ---");
 classement.forEach((e) => console.log(`${e.rang}. ${e.equipe.padEnd(12)} | J:${e.joues} V:${e.victoires} N:${e.nuls} D:${e.defaites} | ${e.bpour}:${e.bcontre} (${e.diff > 0 ? "+" : ""}${e.diff}) | ${e.points} pts`));

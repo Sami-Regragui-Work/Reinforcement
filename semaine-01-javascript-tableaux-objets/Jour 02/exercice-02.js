@@ -128,6 +128,8 @@ function statistiquesParDepartement(employes) {
 }
 
 // Tests
+console.log("***************************** J2-EX2 *****************************");
+
 console.log(rechercherEmployes(employes, { departement: 'Tech', salaireMin: 12000 }));
 console.log(rechercherEmployes(employes, { motCle: 'karim' }));
 console.log(trierEmployes(employes, 'salaire', 'desc').map(e => e.nom + ' ' + e.salaire));

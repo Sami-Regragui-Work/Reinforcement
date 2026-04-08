@@ -144,6 +144,8 @@ function detecterAnomalies(transactions) {
 }
 
 // Tests
+console.log("***************************** J2-EX1 *****************************");
+
 console.log("--- Rapport mensuel ---");
 console.log(rapportMensuel(transactions));
 
