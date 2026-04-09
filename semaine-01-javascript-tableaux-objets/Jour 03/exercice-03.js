@@ -215,7 +215,7 @@ function statistiquesModule(etudiants, nomModule) {
 /**
  *
  * @param {Array<Object>} etudiants
- * @returns {Object}
+ * @returns {Array<Object>}
  */
 function etudiantsARisque(etudiants) {
     // TODO
