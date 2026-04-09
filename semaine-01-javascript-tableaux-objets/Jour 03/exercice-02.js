@@ -219,6 +219,9 @@ function tachesSansResponsable(sprints) {
 }
 
 // Tests
+
+console.log("***************************** J3-EX2 *****************************");
+
 console.log(chargerSprint(sprints, "SP2"));
 console.log("Bloquees:", storiesBloquees(sprints));
 console.log("Velocite:", velociteParSprint(sprints));
