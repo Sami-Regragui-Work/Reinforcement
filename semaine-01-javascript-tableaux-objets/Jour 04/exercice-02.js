@@ -222,32 +222,6 @@ function releveCompte(compte) {
 }
 
 /**
- * [
-  {
-    id: 'CPT001', 
-    titulaire: 'Alami Hassan',  
-    type: 'courant', 
-    solde: 5200,
-    decouvertAutorise: -1000,
-    transactions: [
-      { id: 'TR001', 
-       type: 'depot',   
-       montant: 5000, 
-       date: '2024-03-01', 
-       soldeApres: 5000 },
-    ]
-  },]
- *  * Regles metier :
- * - Un retrait est refuse si solde - montant < decouvertAutorise
- * - Frais de retrait : 0.5% si compte type 'courant', 0 si 'epargne'
- * - Frais mensuels : 25 DH si solde moyen du mois < 1000 DH (compte courant uniquement)
- * - Virement entre comptes : atomique (les deux operations reussissent ou aucune)
- * 
- *  * 4. detecterSuspects(comptes)
- *    Retourner les transactions suspects : montant > 3x la moyenne des transactions du compte.
- *    Format : [{ compteId, transaction, ecartMoyenne }]
- */
-/**
  *
  * @param {Array<Object>} comptes
  * @returns {Array<Object>}
